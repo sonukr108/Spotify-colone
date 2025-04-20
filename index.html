@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="shortcut icon" href="Images/th.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/utility.css">
+</head>
+
+<body>
+    <div class="nav flex items-center">
+        <div class="logo">
+            <div><img class="hamburger" src="Images/hamburger.svg" alt="hamburger"></div>
+            <div class="icon-container" data-tooltip="Spotify"><img src="Images/logo.svg" alt="Spotify"
+                    class="center-icon"></div>
+        </div>
+        <div class="flex items-center gap">
+            <div class="home-icon icon-container bg-gray1" data-tooltip="Home">
+                <img src="Images/home.svg" alt="Home" class="center-icon">
+            </div>
+            <div class="flex items-center justify-center" id="search-panel" role="search">
+                <div class="search-icon icon-container" aria-label="search-box" data-tooltip="Search">
+                    <img src="Images/search.svg" id="search-icon" alt="Search-img" class="center-icon">
+                </div>
+                <input type="text" class="bg-gray1" id="search-box" placeholder="What do you want to play?">
+                <div class="browse-icon icon-container" data-tooltip="Library">
+                    <img src="Images/browse.svg" alt="Library-img" class="center-icon">
+                </div>
+            </div>
+            <div class="search-in-small">
+                <img class="icon-container" src="Images/search.svg" alt="Search" data-tooltip="Search">
+            </div>
+        </div>
+        <div class="sign-up-in flex gap">
+            <button class="sign-up">Sign up</button>
+            <button class="log-in">Log in</button>
+        </div>
+
+    </div>
+    <div class="container flex">
+        <div class="left order bg-gray2 rounded margin1">
+            <div class="add-library flex items-center padding1">
+                <div class="close cp">
+                    <img src="Images/close.svg" alt="close">
+                </div>
+                <div class="flex items-center cp gap">
+                    <img src="Images/library.svg" alt="">
+                    <p>Your Library</p>
+                </div>
+                <div>
+                    <img src="Images/plus_icon.svg" alt="">
+                </div>
+            </div>
+            <div class="song-list rounded flex ">
+                <ul>
+                    <!-- All songs added here using javascript -->
+                </ul>
+            </div>
+            <div class="footer padding1">
+                <span class="small-txt">Legal</span>
+                <span class="small-txt">Safety & Privacy Center</span>
+                <span class="small-txt">Privacy</span>
+                <span class="small-txt">Policy</span>
+                <span class="small-txt">Cookies</span>
+                <span class="small-txt">About Ads</span>
+                <span class="small-txt">Accessibility</span>
+                <br><br>
+                <h5>Cookies</h5>
+                <br><br>
+                <button class="language flex items-center gap">
+                    <img src="Images/lang.svg" class="invert" alt="Language">
+                    <span>English</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="right boder rounded margin1 main-content">
+            <!-- Available albums -->
+            <div class="popular">
+                <div class="flex items-center justify-ends padding1">
+                    <h2>Popular playlists</h2>
+                    <h5 id="show-all">Show all</h5>
+                </div>
+                <div class="cardContainer">
+                    <!-- Albums add dynamically -->
+                </div>
+            </div>
+            <!-- popular Artists -->
+            <div class="popular invert">
+                <div class="flex items-center justify-ends padding1">
+                    <h2>Popular artists</h2>
+                    <h5 id="show-all">Show all</h5>
+                </div>
+                <div class="aritsts-cards">
+                    <div class="card1 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/SpotifyArtitstimages/Pritam.jpg" alt="Pritam Image">
+                        <p class="card-text1">Pritam</p>
+                        <p class="card-text2">Artist</p>
+                    </div>
+                    <div class="card1 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/SpotifyArtitstimages/Sachin-Jigar.jpg" alt="Pritam Image">
+                        <p class="card-text1">Sachin-Jigar</p>
+                        <p class="card-text2">Artist</p>
+                    </div>
+                    <div class="card1 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/SpotifyArtitstimages/ARRahman.jpg" alt="Pritam Image">
+                        <p class="card-text1">A.R. Rahman</p>
+                        <p class="card-text2">Artist</p>
+                    </div>
+                    <div class="card1 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/SpotifyArtitstimages/ArijitSingh.jpg" alt="Pritam Image">
+                        <p class="card-text1">Arijit Singh</p>
+                        <p class="card-text2">Artist</p>
+                    </div>
+                    <div class="card1 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/SpotifyArtitstimages/Anirudhravichander.jpg" alt="Pritam Image">
+                        <p class="card-text1">Anirudh Ravichander</p>
+                        <p class="card-text2">Artist</p>
+                    </div>
+                    <div class="card1 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/SpotifyArtitstimages/AtifAslam.jpg" alt="Pritam Image">
+                        <p class="card-text1">Atif Aslam</p>
+                        <p class="card-text2">Artist</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Popular Albums -->
+            <div class="popular invert">
+                <div class="flex items-center justify-ends padding1">
+                    <h2>Popular albums</h2>
+                    <h5 id="show-all">Show all</h5>
+                </div>
+                <div class="aritsts-cards">
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/Popular Album images/GLORY.jpg" alt="GLORY">
+                        <p class="card-text1">GLORY</p>
+                        <p class="card-text2">Yo Yo Honey Singh</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/Popular Album images/Aashiqui 2.jpg" alt="Aashiqui 2">
+                        <p class="card-text1">Aashiqui 2</p>
+                        <p class="card-text2">Mithoon, Ankit Tiwari, Jeet Gannguli</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/Popular Album images/Jo tum mere ho.jpg" alt="Jo Tum Mere Ho">
+                        <p class="card-text1">Jo Tum Mere Ho</p>
+                        <p class="card-text2">Anuv Jain</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/Popular Album images/Making memories.jpg" alt="Making Memories">
+                        <p class="card-text1">Making Memories</p>
+                        <p class="card-text2">Karan Aujla, Ikky</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/Popular Album images/Ye jawani hai deewani.jpg" alt="Yeh Jawaani Hai Deewani">
+                        <p class="card-text1">Yeh Jawaani Hai Deewani</p>
+                        <p class="card-text2">Pritam</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/Popular Album images/Aaj ki raat.jpg" alt="Aaj Ki Raat">
+                        <p class="card-text1">Aaj Ki Raat (From "Stree 2")</p>
+                        <p class="card-text2">Sachin-Jigar, Amitabh Bhattacharya</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Popular radio -->
+            <div class="popular invert">
+                <div class="flex items-center justify-ends padding1">
+                    <h2>Popular radio</h2>
+                    <h5 id="show-all">Show all</h5>
+                </div>
+                <div class="aritsts-cards">
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/Popular Radio images/1.jpg" alt="1">
+                        <p class="card-text2">With Sachin-Jigar, Mithoon, Jeet...</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/Popular Radio images/2.jpg" alt="1">
+                        <p class="card-text2">With Karan Aujla, Shubh, AP Dhillon an...</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/Popular Radio images/3.jpg" alt="3">
+                        <p class="card-text2">With Pritam, Mohit Chauhan, Atif Aslam...</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/Popular Radio images/4.jpg" alt="4">
+                        <p class="card-text2">With Harris Jayaraj, Anirudh Ravichande...</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/Popular Radio images/5.jpg" alt="5">
+                        <p class="card-text2">With Mohammed Rafi, Asha Bhosle,...</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/Popular Radio images/6.jpg" alt="6">
+                        <p class="card-text2">With A.R. Rahman, Vishal-Shekhar, Atif...</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Featured Charts -->
+            <div class="popular invert">
+                <div class="flex items-center justify-ends padding1">
+                    <h2>Featured Charts</h2>
+                    <h5 id="show-all">Show all</h5>
+                </div>
+                <div class="aritsts-cards">
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/Featured Charts/1.jpg" alt="1">
+                        <p class="card-text2">Your weekly update of the most played...</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/Featured Charts/2.jpg" alt="2">
+                        <p class="card-text2">Your weekly update of the most played...</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/Featured Charts/3.jpg" alt="3">
+                        <p class="card-text2">Your daily update of the most played...</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/Featured Charts/4.jpg" alt="4">
+                        <p class="card-text2">Your daily update of the most played...</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/Featured Charts/5.jpg" alt="5">
+                        <p class="card-text2">Your daily update of the most played...</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+
+                        </div>
+                        <img src="Images/Featured Charts/6.jpg" alt="6">
+                        <p class="card-text2">Your daily update of the most played...</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Playlists from our Editors -->
+            <div class="popular invert">
+                <div class="flex items-center justify-ends padding1">
+                    <h2>Playlists from our Editors</h2>
+                    <h5 id="show-all">Show all</h5>
+                </div>
+                <div class="aritsts-cards">
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+                        </div>
+                        <img src="Images/Playlists from our Editors/1.jpg" alt="1">
+                        <p class="card-text2">Press play, press start</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+                        </div>
+                        <img src="Images/Playlists from our Editors/2.jpg" alt="2">
+                        <p class="card-text2">True indie rock hits. iykyk</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+                        </div>
+                        <img src="Images/Playlists from our Editors/3.jpg" alt="3">
+                        <p class="card-text2">Cover: Phoebe...</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+                        </div>
+                        <img src="Images/Playlists from our Editors/4.jpg" alt="4">
+                        <p class="card-text2">The biggest songs of the 1990s. Cover: Th...</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+                        </div>
+                        <img src="Images/Playlists from our Editors/5.jpg" alt="5">
+                        <p class="card-text2">Soft house music for your laidback...</p>
+                    </div>
+                    <div class="card1 card2 bg-gray">
+                        <div class="play-button">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="60" height="60">
+                                <circle cx="12" cy="12" r="10" fill="#00C853" /> <!-- Green circle -->
+                                <path d="M9.5 8.8L15.5 12L9.5 15.2V8.8Z" fill="#000000" /> <!-- Black play icon -->
+                            </svg>
+                        </div>
+                        <img src="Images/Playlists from our Editors/6.jpg" alt="6">
+                        <p class="card-text2">Hits to boost your mood and fill you wit...</p>
+                    </div>
+                </div>
+            </div>
+            <footer class="right-footer padding1">
+                <div class="footer-container">
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">For the Record</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Communities</h4>
+                        <ul>
+                            <li><a href="#">For Artists</a></li>
+                            <li><a href="#">Developers</a></li>
+                            <li><a href="#">Advertising</a></li>
+                            <li><a href="#">Investors</a></li>
+                            <li><a href="#">Vendors</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Free Mobile App</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Spotify Plans</h4>
+                        <ul>
+                            <li><a href="#">Premium Individual</a></li>
+                            <li><a href="#">Premium Duo</a></li>
+                            <li><a href="#">Premium Family</a></li>
+                            <li><a href="#">Premium Student</a></li>
+                            <li><a href="#">Spotify Free</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <p class="card-text2">© 2024 Spotify By Sonu</p>
+                </div>
+            </footer>
+        </div>
+        <div class="playbar flex justify-center items-center">
+            <div class="seekbar">
+                <div class="seekbar-circle"></div>
+            </div>
+            <div class="abovebar">
+                <div class="songinfo">
+                    <!-- Current Song name here add through js -->
+                </div>
+                <div class="songbuttons flex justify-center">
+                    <img id="previous" src="Images/MusicControls/previous.svg" alt="previous button">
+                    <span class="play-control-button flex justify-center items-center">
+                        <img id="play" src="Images/MusicControls/play.svg" alt="Play button">
+                    </span>
+                    <img id="next" src="Images/MusicControls/next.svg" alt="Next button">
+                </div>
+                <div class="timevol">
+                    <div class="songtime">
+                        <!-- Current Song duration here add through js -->
+                    </div>
+                    <div class="volume">
+                        <img src="Images/MusicControls/sound.svg" alt="Volume Controller">
+                        <div class="range">
+                            <input type="range" name="volume" id="volume-range">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

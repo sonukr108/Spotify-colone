@@ -1,0 +1,104 @@
+
+.flex{
+    display: flex;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-ends{
+    justify-content: space-between;
+}
+
+
+.items-center{
+    align-items: center;
+}
+
+.icon-container {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.icon-container::after {
+    content: attr(data-tooltip); /* Use data-tooltip attribute value */
+    position: absolute;
+    top: 100%; /* Position tooltip below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    font-size: 12px; /* Adjust font size if needed */
+    margin-top: 5px; /* Space between icon and tooltip */
+}
+
+.icon-container:hover::after {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+.center-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bg-gray1{
+    background-color: #212121;
+}
+
+.bg-gray2{
+    background-color: #121212;
+}
+
+.invert{
+    filter: grayscale(100%);
+}
+
+.rounded{
+    border-radius: 7px;
+}
+
+.padding1{
+    padding: 20px;
+}
+
+.margin1{
+    margin: 5px;
+}
+
+.gap{
+    gap: 10px;
+}
+
+.small-button{
+    padding: 7px 12px;
+}
+
+.card-text1{
+    font-size: 18px;
+    font-weight: 500;
+}
+.card-text2{
+    color: #b2b2b2;
+}
+.text1:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.gap-10{
+    gap: 10px;
+}
+.cp{
+    cursor: pointer;
+}
