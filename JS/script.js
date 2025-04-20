@@ -102,7 +102,7 @@ async function displayAlbums() {
 
 async function main() {
     //Get the list of all song
-    await getSongs("Songs/KrishnaSongs");
+    await getSongs("songs/krishna-songs");
     playMusic(songs[0], true);
 
     //Display all the albums on the page
